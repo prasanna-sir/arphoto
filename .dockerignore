@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+/.env
+/database/database.sqlite
+/storage/app/public/*
+.git
+.gitignore
