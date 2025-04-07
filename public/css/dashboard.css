@@ -1,0 +1,132 @@
+/* Dashboard Table */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.hero-section h6,h1{
+    color: #fff;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.dashboard-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.dashboard-table td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+/* Dropdown Container */
+.dropdown-container {
+    margin: 20px 0;
+}
+/* Navigation Links */
+.nav-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    margin: 0 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ebf5ff;
+}
+/* Buttons */
+.btn-add {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+}
+
+.btn-edit {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #218838;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #1e7e34;
+}
+
+.btn-delete {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Order Status Dropdown */
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+/* Back to Top Button */
+.back-to-top {
+    display: none; /* to hide initially*/
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;   
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+    opacity: 0.9;
+}

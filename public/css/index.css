@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e1e1d5;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    color: white;
+    background-color: #111;
+    padding: 80px 0;
+}
+.hero-section h6 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+.hero-section h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Responsive Container */
+.container-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e1e1d5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Flash Messages */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Products Grid */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.product-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.product-item {
+    background-color: #e1e1d5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    min-height: 400px;
+    
+    
+}
+
+.product-item img {
+    width: 100%; /* Fills container */
+    height: 100%; /* Fills container */
+    object-fit: cover; /* Ensures image scales nicely */
+    transition: transform 0.4s ease; /* Smooth zoom effect */
+    border-radius: 5px;
+    
+
+}
+.product-item img:hover  {
+    transform: scale(1.05) ; 
+}
+
+
+
+
+.product-item h5 {
+    font-size: 18px;
+    margin: 10px 0;
+     
+}
+.product-item p {
+    font-size: 16px;
+    color: #e01818;
+    margin: 10px 0;
+}
+
+/* Buttons and Links */
+button, .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+button {
+    background-color: #28a745;
+    color: white;
+}
+button:hover {
+    background-color: #218838;
+}
+.auth button{
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+
+}
+/* .auth a, .auth button {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+} */
+.auth a {
+    display: inline-block;
+    padding:8px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    margin: 5px;
+    text-decoration: none;
+}
+.auth a:hover {
+    background-color: #0056b3;
+}
+.auth button {
+    background-color: #dc3545;
+    
+}
+.auth button:hover {
+    background-color: #c82333;
+}
+
+/* Pagination */
+/* .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.pagination li {
+    margin: 5px;
+}
+.pagination a {
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.pagination a:hover {
+    background-color: #0056b3;
+} */
+
+/* 🔹 Responsive Styles */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .container-content {
+        width: 95%;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    .hero-section h1 {
+        font-size: 24px;
+    }
+
+    .product-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .product-card {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .pagination {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    .hero-section h1 {
+        font-size: 20px;
+    }
+
+    button, .btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .pagination a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
