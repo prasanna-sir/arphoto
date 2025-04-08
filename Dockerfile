@@ -1,5 +1,5 @@
 # Use an official PHP image with Apache as the base image
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 # Install system dependencies and PHP extensions required by Laravel
 RUN apt-get update && apt-get install -y \
