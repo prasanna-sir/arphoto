@@ -6,3 +6,6 @@
 !/database/database.sqlite
 /storage/*
 !/storage/app/public
+/public/build/
+/public/hot
+/public/storage/
