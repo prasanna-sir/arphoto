@@ -7,11 +7,12 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libfreetype6-dev \
     libzip-dev \
+    libxml2-dev \
     unzip \
     sqlite3 \
     libsqlite3-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_sqlite zip
+    && docker-php-ext-install gd pdo pdo_sqlite zip bcmath ctype fileinfo mbstring tokenizer xml
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -19,8 +20,16 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Set the working directory
 WORKDIR /var/www/html
 
-# Copy the application code
+# Copy the application code, database, and images
 COPY . .
+COPY database/database.sqlite /var/www/html/database/database.sqlite
+COPY storage/app/public /var/www/html/storage/app/public
+
+# Set permissions for the database and images
+RUN chown -R www-data:www-data /var/www/html/database /var/www/html/storage/app/public
+RUN chmod -R 664 /var/www/html/database/database.sqlite
+RUN chmod -R 644 /var/www/html/storage/app/public/images
+RUN chmod -R 755 /var/www/html/storage/app/public
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
